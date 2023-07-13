@@ -1,27 +1,89 @@
+:root {
+  /* COLORS */
+  /* primary */
+  --clr-primary-red: hsl(0, 100%, 67%);
+  --clr-primary-yellow: hsl(39, 100%, 56%);
+  --clr-primary-teal: hsl(166, 100%, 37%);
+  --clr-primary-blue: hsl(234, 85%, 45%);
+
+  /* gradients */
+  --clr-results-light: hsl(252, 100%, 67%);
+  --clr-results-med: hsl(241, 81%, 54%);
+
+  --clr-results-dark: hsla(256, 72%, 46%, 1);
+  --clr-results-darker: hsla(241, 72%, 46%, 0);
+
+  /* neutral */
+  --clr-white: hsl(0, 0%, 100%);
+  --clr-pale-blue: hsl(221, 100%, 96%);
+  --clr-light-lavender: hsl(241, 100%, 89%);
+  --clr-dark-gray-blue: hsl(224, 30%, 27%);
+
+  /* font weight */
+  --fw-500: 500;
+  --fw-700: 700;
+  --fw-800: 800;
+}
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
-
+/*
+  2. Remove default margin
+*/
 * {
   margin: 0;
-  padding: 0;
-  font: inherit;
 }
-
-html {
-  color-scheme: dark light;
-}
-
+/*
+  Typographic tweaks!
+  3. Add accessible line-height
+  4. Improve text rendering
+*/
 body {
-  min-height: 100vh;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
 }
-
+/*
+  5. Improve media defaults
+*/
 img,
 picture,
-svg,
-video {
+video,
+canvas,
+svg {
   display: block;
   max-width: 100%;
+}
+/*
+  6. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+  7. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+/*
+  8. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
 }
